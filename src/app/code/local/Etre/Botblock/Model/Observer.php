@@ -8,6 +8,7 @@ class Etre_Botblock_Model_Observer
     {
         Blocker::protect();
         $blocked = Blocker::blocked();
+
         if ($blocked) {
             echo Blocker::explain();
         }

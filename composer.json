@@ -20,5 +20,18 @@
       ["src/app/etc/modules/Etre_Botblock.xml", "app/etc/modules/Etre_Botblock.xml"],
       ["src/app/code/local/Etre/Botblock", "app/code/local/Etre/Botblock"]
     ]
+  },
+  "autoload": {
+    "psr-4": {
+      "BotBlockBin\\": "src/bin/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "BotBlockBin\\Composer\\Messages\\PostInstallUpdateMessage::setupInfo"
+    ],
+    "post-update-cmd": [
+      "BotBlockBin\\Composer\\Messages\\PostInstallUpdateMessage::setupInfo"
+    ]
   }
 }
